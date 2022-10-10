@@ -1,0 +1,28 @@
+<p>
+    <mat-form-field appearance="fill">
+        <mat-label >Date Posted</mat-label>
+        <input matInput [matDatepicker]="picker" required #date>
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Please! enter the Title</mat-label>
+      <input matInput placeholder="Placeholder" required #title>
+      <mat-hint>Enter Carefully!</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="standard">
+      <mat-label>Please! enter Category</mat-label>
+      <input matInput placeholder="Placeholder" required #cate>
+      <mat-hint>Enter Carefully!</mat-hint>
+    </mat-form-field>
+  </p>
+  <div class="mt2">
+    <button mat-raised-button color="primary" type="submit" mat-dialog-close (click)="addingdata(date.value, title.value, cate.value)" >
+      Submit
+    </button>
+  </div>
